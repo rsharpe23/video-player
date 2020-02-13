@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VideoPlayer</title>
+  <link rel="stylesheet" href="dist/video-player.css">
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .video {
+      max-height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video">
+    <!-- data-target is ID of a video from youtube -->
+    <div class="video-player" data-target="hg4eYuel8p8"></div>
+    <button class="video-btn">▶</button>
+  </div>
+
+  <script src="vendors/jquery.min.js"></script>
+  <script src="dist/jquery.video-player.js"></script>
+
+  <script>
+    $('.video-btn').click(e => {
+      $(e.currentTarget).fadeOut();
+      $('.video-player').videoPlayer();
+    });
+  </script>
+</body>
+
+</html>
